@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaylsis</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<script>
+    var url =
+        "https://o0uz9k85x4.execute-api.us-east-1.amazonaws.com/sentiment-final/";
+    $.getJSON(url, function (data) {
+        obj = {
+            senti: data.Sentiment,
+            datap: data.SentimentScore.Positive,
+            datan: data.SentimentScore.Negative,
+            datam: data.SentimentScore.Mixed,
+            dataN: data.SentimentScore.Neutral,
+        }
+        sessionStorage.setItem("Text-data", JSON.stringify(obj));
+    });
+
+</script>
+
+<body>
+    <nav>
+        <h1>Anaylsis Report</h1>
+    </nav>
+    <main class="main-1">
+        <h1>Text Result</h1>
+        <div id="piechart"></div>
+    </main>
+    <main class="main-2">
+        <h1>Facial Result</h1>
+        <div id="piechart-1"></div>
+
+    </main>
+
+</body>
+<script src="./app.js"></script>
+<script src="./app1.js"></script>
+
+</html>

@@ -12,7 +12,7 @@ The facial sentiments is being build up on [face-api.js](https://github.com/just
 
 ### Textual Sentiments
 
-The Textual Sentiments are being build upon AWS services namely AWS Comprehend, AWS S3 and AWS Lambda Function. You need to upload a `.txt ` document to the form and the document is then analyzed by the AWS Comprehend service.
+The Textual Sentiments are being build upon AWS services namely AWS Comprehend, AWS S3 and AWS Lambda Function. You need to upload a `.txt ` document to the form and the document is then analyzed by the AWS Comprehend service via the Lambda function and the result (Sentiment Score) can be viewed using the deployed API endpoint.
 
 ### Report Analysis
 

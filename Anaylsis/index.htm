@@ -12,7 +12,7 @@
 
 <script>
     var url =
-        "https://o0uz9k85x4.execute-api.us-east-1.amazonaws.com/sentiment-final/";
+        "https://cors-anywhere.herokuapp.com/https://o0uz9k85x4.execute-api.us-east-1.amazonaws.com/sentiment-final/";
     $.getJSON(url, function (data) {
         obj = {
             senti: data.Sentiment,
@@ -30,15 +30,18 @@
     <nav>
         <h1>Anaylsis Report</h1>
     </nav>
-    <main class="main-1">
-        <h1>Text Result</h1>
-        <div id="piechart"></div>
-    </main>
-    <main class="main-2">
-        <h1>Facial Result</h1>
-        <div id="piechart-1"></div>
-
-    </main>
+    <div class="content">
+        <main class="main-1">
+            <h1>Text Result</h1>
+            <br>
+            <div id="piechart"></div>
+        </main>
+        <main class="main-2">
+            <h1>Facial Result</h1>
+            <br>
+            <div id="piechart-1"></div>
+        </main>
+    </div>
 
 </body>
 <script src="./app.js"></script>

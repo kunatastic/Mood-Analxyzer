@@ -51,7 +51,7 @@ function stop() {
   alert("Emotion: " + emotion[0]);
 
   sessionStorage.setItem("Face-data", JSON.stringify(data));
-  window.location.replace("../Welcome/index.html");
+  window.location.replace("../index.html");
 }
 
 function screenResize(isScreenSmall) {

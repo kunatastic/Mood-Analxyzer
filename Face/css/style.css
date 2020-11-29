@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100vh;
   background: #2f2f2f;
   width: calc(100% - 33px);
 }
@@ -26,9 +25,10 @@ canvas {
 .result-container > div {
   font-size: 1.3rem;
   padding: 0.5rem;
-  margin: 5px 0;
   color: white;
   text-transform: capitalize;
+  width: 18vw;
+  text-align: center;
 }
 #age {
   background: #1e94be;
@@ -43,10 +43,17 @@ video {
   width: 100%;
 }
 header {
-  background: #42a5f5;
+  background: indigo;
   color: white;
   width: 100%;
   font-size: 2rem;
   padding: 1rem;
   font-size: 2rem;
+  height: 4vh;
+  position: sticky;
+}
+button {
+  outline: none;
+  width: 19vw;
+  height: 4vh;
 }
